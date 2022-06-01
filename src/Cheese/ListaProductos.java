@@ -50,6 +50,12 @@ public class ListaProductos {
     //No implementados los cambios del punto 4
     public Producto addProducto(Producto prod) {
         
+         if (prod.getcode() == null) {
+             
+             System.out.println("Error, cadena vacía");
+             return null;
+         }
+        
         if (listaP.containsKey(prod.getcode())) {
             // System.out.println("Producto con código duplicado");
             return null;
@@ -66,6 +72,12 @@ public class ListaProductos {
  */
     public Producto eliminarProducto(String codigo) { 
         
+           if (codigo == null) {
+             
+             System.out.println("Error, cadena vacía");
+             return null;
+         }
+        
         Producto prod = buscarProducto(codigo);
         if (prod != null) {
         listaP.remove(codigo);
@@ -81,6 +93,12 @@ public class ListaProductos {
  */
     public Producto buscarProducto(String codigo) { 
         Producto prod = null;
+        
+          if (codigo == null) {
+             
+             System.out.println("Error, cadena vacía");
+             return null;
+         }
         
         if (!listaP.containsKey(codigo)) {
             return prod;
