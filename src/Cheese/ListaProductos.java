@@ -47,6 +47,7 @@ public class ListaProductos {
  * @param prod
  * @return 
  */
+    //No implementados los cambios del punto 4
     public Producto addProducto(Producto prod) {
         
         if (listaP.containsKey(prod.getcode())) {
